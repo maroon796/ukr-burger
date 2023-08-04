@@ -1,4 +1,5 @@
 import { AiOutlineMenu } from 'react-icons/ai';
+import { BsFillCartFill } from 'react-icons/bs';
 import Search from './Search';
 
 function Navbar() {
@@ -13,6 +14,10 @@ function Navbar() {
         </h1>
       </div>
       <Search />
+
+      <button className="bg-black text-white flex flex-col items-center justify-center">
+        <BsFillCartFill className="" /> Cart
+      </button>
     </div>
   );
 }

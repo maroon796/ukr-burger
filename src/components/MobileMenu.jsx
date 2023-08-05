@@ -3,7 +3,6 @@ import { BsFillSaveFill } from 'react-icons/bs';
 import { TbTruckDelivery } from 'react-icons/tb';
 import { FaUserFriends, FaWallet } from 'react-icons/fa';
 import { MdFavorite, MdHelp } from 'react-icons/md';
-import { useState } from 'react';
 
 function MobileMenu({ onCloseMobile }) {
   return (

@@ -24,7 +24,7 @@ function Navbar() {
       <Search />
 
       <button className="bg-black text-white flex flex-col items-center justify-center">
-        <BsFillCartFill className="" /> Cart
+        <BsFillCartFill className="" /> Кошик
       </button>
 
       {nav && <MobileMenu onCloseMobile={closeMobileMenu} />}

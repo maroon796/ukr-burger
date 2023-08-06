@@ -1,3 +1,4 @@
+import HeadlineCards from './components/HeadlineCards';
 import MainFood from './components/MainFood';
 import Navbar from './components/Navbar';
 
@@ -6,6 +7,7 @@ function App() {
     <div>
       <Navbar />
       <MainFood />
+      <HeadlineCards />
     </div>
   );
 }

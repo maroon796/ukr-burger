@@ -4,6 +4,22 @@ import { data } from '../data/data';
 function Food() {
   const [foods, setFoods] = useState(data);
 
+  const filterType = (category) => {
+    setFoods(
+      data.filter((item) => {
+        return item.category === category;
+      }),
+    );
+  };
+
+  const filterPrice = (price) => {
+    setFoods(
+      data.filter((item) => {
+        return item.price === price;
+      }),
+    );
+  };
+
   return (
     <div className="max-w-[1640px] m-auto px-4 py-12">
       <h1 className="text-orange-600 font-bold text-4xl text-center">Наше меню</h1>
@@ -12,16 +28,24 @@ function Food() {
         <div>
           <p className="font-bold">Фiльтр по типу</p>
           <div className="flex justify-between flex-wrap">
-            <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
+            <button
+              onClick={() => setFoods(data)}
+              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
               Все
             </button>
-            <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
+            <button
+              onClick={() => filterType('burger')}
+              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
               Бургери
             </button>
-            <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
+            <button
+              onClick={() => filterType('pizza')}
+              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
               Пiца
             </button>
-            <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
+            <button
+              onClick={() => filterType('salad')}
+              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
               Салати
             </button>
           </div>
@@ -29,16 +53,24 @@ function Food() {
         <div>
           <p className="font-bold">Фiльтр по цiнi</p>
           <div className="flex justify-between max-w-[390px] w-full">
-            <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
+            <button
+              onClick={() => filterPrice('$')}
+              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
               $
             </button>
-            <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
+            <button
+              onClick={() => filterPrice('$$')}
+              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
               $$
             </button>
-            <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
+            <button
+              onClick={() => filterPrice('$$$')}
+              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
               $$$
             </button>
-            <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
+            <button
+              onClick={() => filterPrice('$$$$')}
+              className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">
               $$$$
             </button>
           </div>
